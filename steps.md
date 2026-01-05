@@ -60,9 +60,27 @@ aws eks update-kubeconfig --name eks-oncdecb31
 ````
 eksctl delete cluster --name eks-oncdecb31 --region ap-southeast-1
 ````
-#### To check information of nodes
+#### 8:To check information of nodes
 ```bash
 kubectl get nodes
-
-#### To create pod 
+```
+#### 9:To create pod 
+```bash
 kubectl run my-pod --image=nginx
+```
+#### 10:To check pods related information
+```bash
+kubectl get pods
+```
+# Load Balancer
+````
+#### 11: To assign service(any one)
+```bash
+kubectl expose pod my-pod --port=80 --target-port=80 --type=LoadBalancer
+````
+(LoadBalancer of L and B shoulde be capital)
+````
+#### 12:To check service
+````
+kubectl get svc
+
