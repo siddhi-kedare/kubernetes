@@ -88,15 +88,11 @@ kubectl get svc
 ````
 kubectl run super-mario --image=abhipraydh96/super-mario:latest
 ````
-#### 14 ####
-kubectl expose pod super-mario --type=LoadBalancer --port=80
+#### 14:kubectl expose pod super-mario --type=LoadBalancer --port=80 ####
+````
+#### 15:kubectl get svc ####
+````
+#### 16:kubectl get node -o wide ####
 ``
-#### 15 ####
-kubectl get svc
-````
-#### 16 ####
-````
-kubectl get node -o wide
-````
 #### copy the External IP:portNo ####
 
