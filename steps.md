@@ -90,15 +90,13 @@ kubectl run super-mario --image=abhipraydh96/super-mario:latest
 ````
 #### 14 ####
 kubectl expose pod super-mario --type=LoadBalancer --port=80
-```bash
-```
+````
+````
 ### 15 ####
 kubectl get svc
-```bash
-```
+````
 #### 16 ####
 kubectl get node -o wide
-```bash
-```
-#### copy the <External IP>:portNo #### 
+````
+#### copy the External IP:portNo #### 
 
