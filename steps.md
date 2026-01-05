@@ -60,7 +60,9 @@ aws eks update-kubeconfig --name eks-oncdecb31
 ````
 eksctl delete cluster --name eks-oncdecb31 --region ap-southeast-1
 ````
-####To check information od nodees
-**kubectl get nodes
-####To create pod 
-**kubectl run my-pod --image=nginx
+#### To check information of nodes
+```bash
+kubectl get nodes
+
+#### To create pod 
+kubectl run my-pod --image=nginx
