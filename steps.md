@@ -73,15 +73,13 @@ kubectl run my-pod --image=nginx
 kubectl get pods
 ```
 # Load Balancer
-````
-````
-## 11: To assign service(any one)##
-````
+
+#### 11: To assign service(any one)####
+```
 kubectl expose pod my-pod --port=80 --target-port=80 --type=LoadBalancer
-````
 (LoadBalancer of L and B shoulde be capital)
-````
-````
+```
+
 #### 12:To check service
 ````
 kubectl get svc
