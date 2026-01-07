@@ -65,3 +65,48 @@ spec:
      port: 80
      targetPort: 80
   type: NodePort
+````
+# Replication Set
+````
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rc-games
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+     env: dev
+  template:
+    metadata:
+      name: tmp-game
+      labels:
+        env: dev
+    spec:
+      containers:
+      - name: c1
+        image: abhinagare/abhi-new-repo:v2
+        ports:
+        - containerPort: 80
+````
+# Replication Controller
+````
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: vc-game
+spec:
+  replicas: 4
+  selector:
+    env: dev
+  template:
+    metadata:
+      name: tmp-game
+      labels:
+        env: dev
+    spec:
+      containers:
+        - name: c1
+          image: abhinagare/abhi-new-repo:v2
+          ports:
+            - containerPort: 80
