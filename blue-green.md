@@ -74,6 +74,7 @@ spec:
      targetPort: 80
   type: NodePort
 ````
+````
 kubectl apply -f blue.yaml
 ````
 kubectl get pods
