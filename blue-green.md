@@ -77,9 +77,12 @@ spec:
 ````
 kubectl apply -f blue.yaml
 ````
+````
 kubectl get pods
 ````
+````
 kubectl apply -f service.yaml
+````
 ````
 kubectl get svc
 ````
