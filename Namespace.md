@@ -2,57 +2,57 @@
 ````
 A Namespace is a logical partition used to organize,isolate and manage the resources within single cluster
 ````
-#### To create namespace ####
+#### 1. To create namespace ####
 ````
 kubectl create ns test
 ````
 ````
 kubectl create namespace test
 ````
-#### To check namespace ####
+#### 2. To check namespace ####
 ````
 kubectl get ns
 ````
 ````
 kubectl get namespace
 ````
-#### TO check current active namespace ####
+#### 3. TO check current active namespace ####
 ````
 kubectl config view --minify | grep namespace:
 ````
-#### TO check object version ####
+#### 4. TO check object version ####
 ````
 kubectl api-resources
 ````
-#### To delete pods ####
+#### 5. To delete pods ####
 ````
 kubectl delete pod (pod name)
 ````
-#### To delete deploy file ####
+#### 6. To delete deploy file ####
 ````
 kubectl delete deploy (deploy name)
 ````
-#### To check deploy ####
+#### 7. To check deploy ####
 ````
 kubectl get deploy
 ````
-#### To create and apply namespace ####
+#### 8. To create and apply namespace ####
 ````
 kubectl apply -f deploy.yaml -n test
 ````
-#### To check pods is created in test ####
+#### 9. To check pods is created in test ####
 ````
 kubectl get pods -n test
 ````
-#### To check deploy in created in test ####
+#### 10. To check deploy in created in test ####
 ````
 kubectl get deploy -n test
 ````
-#### To login/To work inside the namespace ####
+#### 11. To login/To work inside the namespace ####
 ````
 kubectl config set-context --current --namespace=test
 ````
-#### To edit in deploy.yaml(Add only Namespace) ####
+#### 12. To edit in deploy.yaml(Add only Namespace) ####
 ````
 apiVersion: apps/v1
 kind: Deployment
@@ -76,7 +76,7 @@ spec:
         ports:
         - containerPort: 80
 ````
-#### To apply ####
+#### 13. To apply ####
 ````
 kubectl apply -f deploy.yaml
 ````
@@ -87,15 +87,15 @@ kind: Namespace
 metadata:
  name: dev
 ````
-#### To check running pods ####
+#### 14. To check running pods ####
 ````
 kubectl get pods --all-namespace
 ````
-#### TO check running deploy ####
+#### 15. TO check running deploy ####
 ````
 kubectl get deploy --all-namespace
 ````
-#### To check svc in namespace ####
+#### 16. To check svc in namespace ####
 ````
 kubectl get svc -n test
 ````
